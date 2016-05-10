@@ -17,13 +17,19 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'id') ?>
 
-    <?= $form->field($model, 'nickName') ?>
+    <?= $form->field($model, 'nick_name') ?>
 
     <?= $form->field($model, 'created_at') ?>
 
     <?= $form->field($model, 'updated_at') ?>
 
-    <?= $form->field($model, 'viewTimes') ?>
+    <?= $form->field($model, 'view_times') ?>
+
+    <?php // echo $form->field($model, 'open_id') ?>
+
+    <?php // echo $form->field($model, 'share_cookie') ?>
+
+    <?php // echo $form->field($model, 'weixin_nick_name') ?>
 
     <div class="form-group">
         <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>

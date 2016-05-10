@@ -29,9 +29,8 @@ class ViewPeople extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['mobileMime'], 'required'],
+            [['open_id', 'share_user_id'], 'required'],
             [['created_at', 'updated_at'], 'safe'],
-            [['mobileMime'], 'string', 'max' => 100],
         ];
     }
 
@@ -42,8 +41,8 @@ class ViewPeople extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'mobileMime' => '手机唯一标识号',
-            'shareuserId' => '分享者id',
+            'open_id' => '用户微信openId',
+            'share_user_id' => '分享者id',
             'created_at' => '第一次浏览时间',
             'updated_at' => '最后一次浏览时间',
         ];
@@ -53,10 +52,10 @@ class ViewPeople extends \yii\db\ActiveRecord
      * @inheritdoc
      * @return ViewPeoplesQuery the active query used by this AR class.
      */
-    public static function find()
-    {
-        return new ViewPeoplesQuery(get_called_class());
-    }
+    // public static function find()
+    // {
+        // return new ViewPeoplesQuery(get_called_class());
+    // }
 
     public static function hasMobileMime($shareToken, $id) {
         $result = static::findOne(['mobileMime' => $shareToken]);

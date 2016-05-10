@@ -39,11 +39,11 @@ class ShareUser extends \yii\db\ActiveRecord
     {
         return [
             //[['nickName', 'viewTimes'], 'required'],
-            ['nickName', 'required', 'message' => '呢称不能为空'],
-            ['nickName', 'string', 'min' => 2, 'tooShort' => '呢称至少填写两个字符'],
-            ['nickName', 'unique', 'message' => '该呢称已经被使用'],
+            ['nick_name', 'required', 'message' => '班级或呢称不能为空'],
+            ['nick_name', 'string', 'min' => 2, 'tooShort' => '班级或呢称至少填写两个字符'],
+            ['nick_name', 'unique', 'message' => '该班级或呢称已经被使用'],
             [['created_at', 'updated_at'], 'safe'],
-            [['viewTimes'], 'integer'],
+            [['view_times'], 'integer'],
            // [['nickName'], 'string', 'max' => 32]
         ];
     }
@@ -55,9 +55,10 @@ class ShareUser extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'nickName' => '呢称',
+            'nick_name' => '呢称',
             'created_at' => '分享创建时间',
-            'viewTimes' => '分享被浏览次数',
+            'view_times' => '分享被浏览次数',
+            'weixin_nick_name' => '微信呢称',
         ];
     }
 
@@ -65,10 +66,10 @@ class ShareUser extends \yii\db\ActiveRecord
      * @inheritdoc
      * @return ShareUsersQuery the active query used by this AR class.
      */
-    public static function find()
-    {
-        return new ShareUsersQuery(get_called_class());
-    }
+    // public static function find()
+    // {
+        // return new ShareUsersQuery(get_called_class());
+    // }
 
     public function getViewPeoples() {
 

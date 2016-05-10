@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1"/>
+<title>属于你的青春纪念旅</title>
+<link rel="stylesheet" type="text/css" href="css/css.css" />
+</head>
+<body>
+<div class="container">
+    <div><img src="img/2-2.png"/ style="width:100%;"></div>
+    <div class="text">
+        <p class="title">快来开启属于你的青春纪念旅，赢取活动大奖吧！<p>
+        <p class="content">（在框内输入你的姓名或昵称，点击生成，并分享你的专属页面至朋友圈，即可参与抽奖活动哦~）<p>
+    </div>
+    <div class="input-area">
+        <div >
+           <input type="text" name="" value="姓名或昵称" onfocus="a();" onblur="b();" id="input-text"/>
+        </div>
+        <div >
+		   <button>生成</button>
+        </div>
+    </div>
+    <div class="footer"><p id="footer-p">本活动最终解释权归海投网所有</p></div>
+</div>
+</body>
+<script>
+     var id= document.getElementById("input-text");
+function b(){ if(id.value==""){id.value="姓名或昵称";id.style.color="#b9b9b9";}}
+function a(){ if(id.value==(""||"姓名或昵称")){id.value="";id.style.color="#000";} }
+</script>
+</html>
+<script src="//cdn.bootcss.com/jquery/1.12.1/jquery.js"></script>
+
+<script type="text/javascript">
+  $.ajaxSetup({
+    headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    }
+});
+</script>
+
+    // public function actionCallback()
+    // {
+        // $app = new Application($this->config);
+        // $oauth = $app->oauth;
+
+        // // 获取 OAuth 授权结果用户信息
+        // $user = $oauth->user();
+
+        // $_SESSION['wechat_user'] = $user->toArray();
+
+        // $targetUrl = empty($_SESSION['target_url']) ? '/' : $_SESSION['target_url'];
+        // var_dump($user);
+        // echo '<br>';
+        // echo $user->getId();
+
+        // // header('location:'. $targetUrl); // 跳转到 user/profile
+        // // return $this->render('callback');
+    // }
+
+    // public function actionIndex()
+    // {
+         
+        // // var_dump(ini_get('curl.cainfo'));
+        // // exit;
+        // $app = new Application($this->config);
+        // $oauth = $app->oauth;
+
+        // if (empty($_SESSION['wechat_user'])) {
+
+        // $_SESSION['target_url'] = 'wechat/index';
+
+        // return $oauth->redirect();
+        // // 这里不一定是return，如果你的框架action不是返回内容的话你就得使用
+        // // $oauth->redirect()->send();
+        // }
+
+        // // 已经登录过
+        // $user = $_SESSION['wechat_user'];
+        // var_dump($user);
+        // // return $this->render('index');
+    // }
+

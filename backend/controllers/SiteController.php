@@ -6,8 +6,6 @@ use yii\filters\AccessControl;
 use yii\web\Controller;
 use common\models\LoginForm;
 use yii\filters\VerbFilter;
-echo 'test';
-exit;
 
 /**
  * Site controller

@@ -12,13 +12,13 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'mobileMime')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'shareuserId')->textInput() ?>
-
     <?= $form->field($model, 'created_at')->textInput() ?>
 
     <?= $form->field($model, 'updated_at')->textInput() ?>
+
+    <?= $form->field($model, 'share_user_id')->textInput() ?>
+
+    <?= $form->field($model, 'open_id')->textInput(['maxlength' => true]) ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

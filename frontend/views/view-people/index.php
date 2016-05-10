@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 
 /* @var $this yii\web\View */
-/* @var $searchModel frontend\models\ViewPeoPleSearch */
+/* @var $searchModel frontend\models\ViewPeopleSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = 'View Peoples';
@@ -26,10 +26,10 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             'id',
-            'mobileMime',
-            'shareuserId',
             'created_at',
             'updated_at',
+            'share_user_id',
+            'open_id',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

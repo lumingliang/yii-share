@@ -18,8 +18,8 @@ class ShareUserSearch extends ShareUser
     public function rules()
     {
         return [
-            [['id', 'viewTimes'], 'integer'],
-            [['nickName', 'created_at', 'updated_at'], 'safe'],
+            [['id', 'view_times'], 'integer'],
+            [['nick_name', 'created_at', 'updated_at', 'open_id', 'share_cookie', 'weixin_nick_name'], 'safe'],
         ];
     }
 
@@ -45,12 +45,6 @@ class ShareUserSearch extends ShareUser
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
-            // 'key' => function($model) {
-                // return md5($model->id);
-            // },
-            'pagination' => [
-                'pageSize' => 10,
-            ],
         ]);
 
         $this->load($params);
@@ -61,15 +55,17 @@ class ShareUserSearch extends ShareUser
             return $dataProvider;
         }
 
-        // $query是一个引用
         $query->andFilterWhere([
             'id' => $this->id,
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
-            'viewTimes' => $this->viewTimes,
+            'view_times' => $this->view_times,
         ]);
 
-        $query->andFilterWhere(['like', 'nickName', $this->nickName]);
+        $query->andFilterWhere(['like', 'nick_name', $this->nick_name])
+            ->andFilterWhere(['like', 'open_id', $this->open_id])
+            ->andFilterWhere(['like', 'share_cookie', $this->share_cookie])
+            ->andFilterWhere(['like', 'weixin_nick_name', $this->weixin_nick_name]);
 
         return $dataProvider;
     }

@@ -22,6 +22,7 @@ use frontend\runtime\ex\AutoloadExample;
  */
 class SiteController extends Controller
 {
+    public $layout = 'blank';
     /**
      * @inheritdoc
      */
@@ -74,8 +75,20 @@ class SiteController extends Controller
      *
      * @return mixed
      */
-    public function actionIndex()
+    public function actionIndext()
     {
+
+        // session_start();
+        // var_dump(isset($r));
+        // $_SESSION['KK']['PPP'] = 'KK';
+        // echo $_SESSION['KK']['PPP'];
+        // $t = (object)$_SESSION['KK'];
+        // $t = (object)['jj' => ['tt' => 'kk']];
+        // $t = (object)$t->jj;
+        // echo $t->tt;
+        // echo YII_BEGIN_TIME;
+        // echo time();
+        // exit;
          // echo AutoloadExample::widget();
         return $this->render('index');
     }

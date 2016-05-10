@@ -22,8 +22,8 @@ $this->params['breadcrumbs'][] = Null;
             ['class' => 'yii\grid\SerialColumn'],
 
             'id',
-            'mobileMime',
-            'shareuserId',
+            'open_id',
+            'share_user_id',
             'created_at',
             [
                 'class' => 'yii\grid\ActionColumn', 
@@ -36,6 +36,11 @@ $this->params['breadcrumbs'][] = Null;
                     },
                 ],
             ],
+        ],
+        'summary' => '第{begin}-{end}条，共{totalCount}条数据.',
+        'layout' => "{items}\n{summary}\n{pager}",
+        'pager' => [
+            'options' => ['class' => 'pagination pull-right reset margin top bottom'],
         ],
     ]); ?>
 

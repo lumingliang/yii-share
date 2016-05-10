@@ -8,7 +8,7 @@ use yii\data\ActiveDataProvider;
 use frontend\models\ViewPeople;
 
 /**
- * ViewPeoPleSearch represents the model behind the search form about `frontend\models\ViewPeople`.
+ * ViewPeopleSearch represents the model behind the search form about `frontend\models\ViewPeople`.
  */
 class ViewPeopleSearch extends ViewPeople
 {
@@ -18,8 +18,8 @@ class ViewPeopleSearch extends ViewPeople
     public function rules()
     {
         return [
-            [['id', 'shareuserId'], 'integer'],
-            [['mobileMime', 'created_at', 'updated_at'], 'safe'],
+            [['id', 'share_user_id'], 'integer'],
+            [['created_at', 'updated_at', 'open_id'], 'safe'],
         ];
     }
 
@@ -57,12 +57,12 @@ class ViewPeopleSearch extends ViewPeople
 
         $query->andFilterWhere([
             'id' => $this->id,
-            'shareuserId' => $this->shareuserId,
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
+            'share_user_id' => $this->share_user_id,
         ]);
 
-        $query->andFilterWhere(['like', 'mobileMime', $this->mobileMime]);
+        $query->andFilterWhere(['like', 'open_id', $this->open_id]);
 
         return $dataProvider;
     }

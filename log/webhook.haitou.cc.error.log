@@ -1,0 +1,28 @@
+[Mon May 09 14:17:56.517952 2016] [:error] [pid 32725] [client 127.0.0.1:35457] PHP MongoCursorTimeoutException:  localhost:27017: Read timed out after reading 0 bytes, waited for 30.000000 seconds in /home/wwwroot/haitou2/vendor/yiisoft/yii2-mongodb/Query.php on line 191
+[Mon May 09 14:17:56.518023 2016] [:error] [pid 32725] [client 127.0.0.1:35457] PHP Stack trace:
+[Mon May 09 14:17:56.518038 2016] [:error] [pid 32725] [client 127.0.0.1:35457] PHP   1. {main}() /home/wwwroot/haitou2/webhook/web/index.php:0
+[Mon May 09 14:17:56.518051 2016] [:error] [pid 32725] [client 127.0.0.1:35457] PHP   2. yii\\base\\Application->run() /home/wwwroot/haitou2/webhook/web/index.php:18
+[Mon May 09 14:17:56.518064 2016] [:error] [pid 32725] [client 127.0.0.1:35457] PHP   3. yii\\web\\Application->handleRequest() /home/wwwroot/haitou2/vendor/yiisoft/yii2/base/Application.php:375
+[Mon May 09 14:17:56.518077 2016] [:error] [pid 32725] [client 127.0.0.1:35457] PHP   4. yii\\base\\Module->runAction() /home/wwwroot/haitou2/vendor/yiisoft/yii2/web/Application.php:84
+[Mon May 09 14:17:56.518089 2016] [:error] [pid 32725] [client 127.0.0.1:35457] PHP   5. yii\\base\\Controller->runAction() /home/wwwroot/haitou2/vendor/yiisoft/yii2/base/Module.php:454
+[Mon May 09 14:17:56.518102 2016] [:error] [pid 32725] [client 127.0.0.1:35457] PHP   6. yii\\base\\InlineAction->runWithParams() /home/wwwroot/haitou2/vendor/yiisoft/yii2/base/Controller.php:154
+[Mon May 09 14:17:56.518115 2016] [:error] [pid 32725] [client 127.0.0.1:35457] PHP   7. call_user_func_array:{/home/wwwroot/haitou2/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/wwwroot/haitou2/vendor/yiisoft/yii2/base/InlineAction.php:55
+[Mon May 09 14:17:56.518128 2016] [:error] [pid 32725] [client 127.0.0.1:35457] PHP   8. webhook\\controllers\\TestController->actionTest() /home/wwwroot/haitou2/vendor/yiisoft/yii2/base/InlineAction.php:55
+[Mon May 09 14:17:56.518141 2016] [:error] [pid 32725] [client 127.0.0.1:35457] PHP   9. yii\\mongodb\\ActiveQuery->all() /home/wwwroot/haitou2/webhook/controllers/TestController.php:24
+[Mon May 09 14:17:56.518153 2016] [:error] [pid 32725] [client 127.0.0.1:35457] PHP  10. yii\\mongodb\\Query->all() /home/wwwroot/haitou2/vendor/yiisoft/yii2-mongodb/ActiveQuery.php:136
+[Mon May 09 14:17:56.518165 2016] [:error] [pid 32725] [client 127.0.0.1:35457] PHP  11. yii\\mongodb\\Query->fetchRows() /home/wwwroot/haitou2/vendor/yiisoft/yii2-mongodb/Query.php:214
+[Mon May 09 14:17:56.518177 2016] [:error] [pid 32725] [client 127.0.0.1:35457] PHP  12. yii\\mongodb\\Query->fetchRowsInternal() /home/wwwroot/haitou2/vendor/yiisoft/yii2-mongodb/Query.php:170
+[Mon May 09 14:17:56.518189 2016] [:error] [pid 32725] [client 127.0.0.1:35457] PHP  13. MongoCursor->rewind() /home/wwwroot/haitou2/vendor/yiisoft/yii2-mongodb/Query.php:191
+[Mon May 09 14:17:56.518630 2016] [:error] [pid 32725] [client 127.0.0.1:35457] PHP yii\\mongodb\\Exception:  localhost:27017: Read timed out after reading 0 bytes, waited for 30.000000 seconds in /home/wwwroot/haitou2/vendor/yiisoft/yii2-mongodb/Query.php on line 176
+[Mon May 09 14:17:56.518660 2016] [:error] [pid 32725] [client 127.0.0.1:35457] PHP Stack trace:
+[Mon May 09 14:17:56.518675 2016] [:error] [pid 32725] [client 127.0.0.1:35457] PHP   1. {main}() /home/wwwroot/haitou2/webhook/web/index.php:0
+[Mon May 09 14:17:56.518688 2016] [:error] [pid 32725] [client 127.0.0.1:35457] PHP   2. yii\\base\\Application->run() /home/wwwroot/haitou2/webhook/web/index.php:18
+[Mon May 09 14:17:56.518700 2016] [:error] [pid 32725] [client 127.0.0.1:35457] PHP   3. yii\\web\\Application->handleRequest() /home/wwwroot/haitou2/vendor/yiisoft/yii2/base/Application.php:375
+[Mon May 09 14:17:56.518712 2016] [:error] [pid 32725] [client 127.0.0.1:35457] PHP   4. yii\\base\\Module->runAction() /home/wwwroot/haitou2/vendor/yiisoft/yii2/web/Application.php:84
+[Mon May 09 14:17:56.518725 2016] [:error] [pid 32725] [client 127.0.0.1:35457] PHP   5. yii\\base\\Controller->runAction() /home/wwwroot/haitou2/vendor/yiisoft/yii2/base/Module.php:454
+[Mon May 09 14:17:56.518737 2016] [:error] [pid 32725] [client 127.0.0.1:35457] PHP   6. yii\\base\\InlineAction->runWithParams() /home/wwwroot/haitou2/vendor/yiisoft/yii2/base/Controller.php:154
+[Mon May 09 14:17:56.518756 2016] [:error] [pid 32725] [client 127.0.0.1:35457] PHP   7. call_user_func_array:{/home/wwwroot/haitou2/vendor/yiisoft/yii2/base/InlineAction.php:55}() /home/wwwroot/haitou2/vendor/yiisoft/yii2/base/InlineAction.php:55
+[Mon May 09 14:17:56.518769 2016] [:error] [pid 32725] [client 127.0.0.1:35457] PHP   8. webhook\\controllers\\TestController->actionTest() /home/wwwroot/haitou2/vendor/yiisoft/yii2/base/InlineAction.php:55
+[Mon May 09 14:17:56.518782 2016] [:error] [pid 32725] [client 127.0.0.1:35457] PHP   9. yii\\mongodb\\ActiveQuery->all() /home/wwwroot/haitou2/webhook/controllers/TestController.php:24
+[Mon May 09 14:17:56.518793 2016] [:error] [pid 32725] [client 127.0.0.1:35457] PHP  10. yii\\mongodb\\Query->all() /home/wwwroot/haitou2/vendor/yiisoft/yii2-mongodb/ActiveQuery.php:136
+[Mon May 09 14:17:56.518805 2016] [:error] [pid 32725] [client 127.0.0.1:35457] PHP  11. yii\\mongodb\\Query->fetchRows() /home/wwwroot/haitou2/vendor/yiisoft/yii2-mongodb/Query.php:214

@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model frontend\models\ViewPeoPleSearch */
+/* @var $model frontend\models\ViewPeopleSearch */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
@@ -17,13 +17,13 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'id') ?>
 
-    <?= $form->field($model, 'mobileMime') ?>
-
-    <?= $form->field($model, 'shareuserId') ?>
-
     <?= $form->field($model, 'created_at') ?>
 
     <?= $form->field($model, 'updated_at') ?>
+
+    <?= $form->field($model, 'share_user_id') ?>
+
+    <?= $form->field($model, 'open_id') ?>
 
     <div class="form-group">
         <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>

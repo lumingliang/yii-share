@@ -4,13 +4,13 @@ namespace frontend\controllers;
 
 use Yii;
 use frontend\models\ViewPeople;
-use frontend\models\ViewPeoPleSearch;
+use frontend\models\ViewPeopleSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * ViewPeoPleController implements the CRUD actions for ViewPeople model.
+ * ViewPeopleController implements the CRUD actions for ViewPeople model.
  */
 class ViewPeopleController extends Controller
 {
@@ -32,7 +32,7 @@ class ViewPeopleController extends Controller
      */
     public function actionIndex()
     {
-        $searchModel = new ViewPeoPleSearch();
+        $searchModel = new ViewPeopleSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -100,7 +100,7 @@ class ViewPeopleController extends Controller
     {
         $this->findModel($id)->delete();
 
-        return $this->redirect(['view-peoples', 'id' => $id]);
+        return $this->redirect(['index']);
     }
 
     /**

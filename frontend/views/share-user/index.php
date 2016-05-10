@@ -31,13 +31,13 @@ $this->params['breadcrumbs'][] = $this->title;
                 // 'attribute' => 'id',
                 // 'header' => '用户id',
             // ],
-            'nickName',
+            'nick_name',
             'created_at',
             [
-                'attribute' => 'viewTimes',
+                'attribute' => 'view_times',
                 'content' => function($model, $key) {
                     //return Html::tag('a', '查看详情', ['href'])
-                    return Html::a(Html::tag('span', $model->viewTimes, ['class' => 'badge']).'&nbsp&nbsp查看详情', Url::to(['share-user/view-peoples', 'id' => $model->id]), ['class' => 'label label-primary']);
+                    return Html::a(Html::tag('span', $model->view_times, ['class' => 'badge']).'&nbsp&nbsp查看详情', Url::to(['share-user/view-peoples', 'id' => $model->id]), ['class' => 'label label-primary']);
                 }
             ],
             [
